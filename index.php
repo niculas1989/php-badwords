@@ -3,6 +3,11 @@ $first_try = 'Pippo';
 
 $len_string = strlen($first_try);
 
+$censured_string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+
+/* $word = $_GET('word'); */
+
+$new_string = str_replace('Lorem', '****', $censured_string);
 /*
 
 Descrizione:
@@ -29,6 +34,11 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 <body>
     <p>Il nome che utilizzato per questo esercizio è: <?php echo $first_try ?></p>
     <p>La sua lunghezza è: <?php echo $len_string ?></p>
+
+    <div>
+        <p>La frase originale è questa: <?php echo $censured_string ?></p>
+        <p>La frase con la parola censurata scelta dall'utente è: <?php echo $new_string ?></p>
+    </div>
 </body>
 
 </html>
