@@ -1,6 +1,7 @@
 <?php
 $first_try = 'Pippo';
 
+$len_string = strlen($first_try);
 
 /*
 
@@ -26,9 +27,8 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 </head>
 
 <body>
-    <?php
-    echo $first_try;
-    ?>
+    <p>Il nome che utilizzato per questo esercizio è: <?php echo $first_try ?></p>
+    <p>La sua lunghezza è: <?php echo $len_string ?></p>
 </body>
 
 </html>
