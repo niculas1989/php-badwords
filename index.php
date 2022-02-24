@@ -1,3 +1,9 @@
+<?php
+$first_try = 'Pippo';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +16,9 @@
 </head>
 
 <body>
-
+    <?php
+    echo $first_try;
+    ?>
 </body>
 
 </html>
