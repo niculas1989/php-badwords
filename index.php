@@ -8,7 +8,7 @@ $censured_string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 $word = $_GET['word'] ?? '';
 
 if (!empty($word)) {
-    $new_string = str_replace(ucwords($word), '****', $censured_string);
+    $new_string = str_replace($word, '****', $censured_string);
 }
 /*
 
