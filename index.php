@@ -7,7 +7,9 @@ $censured_string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 
 $word = $_GET['word'] ?? '';
 
-$new_string = str_replace(ucwords($word), '****', $censured_string);
+if (!empty($word)) {
+    $new_string = str_replace(ucwords($word), '****', $censured_string);
+}
 /*
 
 Descrizione:
@@ -43,8 +45,10 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
         <form method="GET">
             <input type="text" name="word" id=""> <button type="submit">INVIA</button>
         </form>
-        <p>La frase con la parola censurata scelta dall'utente è: <?php echo $new_string ?></p>
-        <p>La frase con la parola censurata scelta dall'utente è lunga: <?= strlen($new_string) ?></p>
+        <?php if (!empty($word)) : ?>
+            <p>La frase con la parola censurata scelta dall'utente è: <?php echo $new_string ?></p>
+            <p>La frase con la parola censurata scelta dall'utente è lunga: <?= strlen($new_string) ?></p>
+        <?php endif; ?>
     </div>
 </body>
 
